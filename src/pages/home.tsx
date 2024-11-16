@@ -5,6 +5,7 @@ import { CreateVehicles } from "@/components/create-vehicles";
 import { CreateDisplacement } from "@/components/create-displacement";
 import { ListDisplacements } from "@/components/list-displacement";
 import { CreateSuplly } from "@/components/create-supply";
+import { ListSupplies } from "@/components/list-supplies";
 
 export default function GerenciamentoVeiculos() {
 	return (
@@ -13,11 +14,14 @@ export default function GerenciamentoVeiculos() {
 				Sistema de Gerenciamento de Veículos
 			</h1>
 			<Tabs defaultValue="veiculos">
-				<TabsList className="grid w-full grid-cols-5 mb-4">
+				<TabsList className="grid w-full grid-cols-6 mb-4">
 					<TabsTrigger value="veiculos">Veículos</TabsTrigger>
 					<TabsTrigger value="create-displacement">Deslocamento</TabsTrigger>
 					<TabsTrigger value="supply">Abastecimento</TabsTrigger>
 					<TabsTrigger value="list">Lista de Veículos</TabsTrigger>
+					<TabsTrigger value="list-supplies">
+						Lista de Abastecimentos
+					</TabsTrigger>
 					<TabsTrigger value="list-displacement">
 						Lista de Deslocamentos
 					</TabsTrigger>
@@ -37,6 +41,10 @@ export default function GerenciamentoVeiculos() {
 
 				<TabsContent value="list-displacement">
 					<ListDisplacements />
+				</TabsContent>
+
+				<TabsContent value="list-supplies">
+					<ListSupplies />
 				</TabsContent>
 			</Tabs>
 		</div>
